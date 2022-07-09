@@ -167,6 +167,8 @@ svg {
 /* pimary & secondary */
 .fs-primary-heading { 
   font-size: var(--fs-primary-heading); 
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .fs-secondary-heading {
   font-size: var(--fs-secondary-heading);
@@ -176,3 +178,9 @@ svg {
 .fs-400 { font-size: var(--fs-400); }
 .fs-500 { font-size: var(--fs-500); }
 .fs-600 { font-size: var(--fs-600); }
+
+
+/* Logo */
+.turn-white {
+  filter: brightness(0) invert(1);
+}

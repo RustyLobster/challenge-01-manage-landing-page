@@ -4,142 +4,387 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
 
-    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Portfolio App</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="./css/output/style.css">
+
+    <!-- Reusable Component Settings: JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(function () {
+        $(".header").load("../components/header.html");
+        $(".button").load("../components/button.html");
+        $(".hamburger").load("../components/hamburger.html");
+      });
+    </script>
   </head>
+
+  <!-- breakpoint: medium -->
   <body>
-    <header class="primary-header">
-      <div class="container">
-        <a href="#"><img src="/images/logo.svg"></a>
-        <nav class="primary-navigation">
-          <ul role="list" class="">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="button">Get Started</button>
-      </div>
-    </header>
+
+    <!-- Navbar -->
+    <div class="REU | hamburger"></div>
+    <div class="REU | header"></div>
+    <!-- Navbar EO -->
 
     <main>
-      <section>
-        <div class="container">
-          <div class="even-columns">
-            <div>
-              <h1 class="fs-primary-heading fw-bold">Bring everyone together to build better products.</h1>
-              <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
-              <button class="button">Get Started</button>
-            </div>
-            <div>
-              <img src="/images/illustration-intro.svg" alt="">
-            </div>
-          </div>
+      <img src="./images/bg-tablet-pattern.svg" alt=""
+        class="fixed -top-32 -right-48 pointer-events-none" style="z-index: -1;">
+
+      <!-- Hero Section -->
+      <section 
+        class="con | w-full px-16 lg:px-24 xl:px-40 mt-20 max-w-screen-2xl
+               con-pos | mx-auto flex flex-col-reverse lg:flex-row justify-center">
+        <!-- Hero Title -->
+        <div class="con | w-full lg:w-1/2 lg:pr-20">
+          <h1 class="con | pt-14
+                    typ-con | text-center lg:text-start
+                    typ | font-vietnam font-bold text-4xl lg:text-5xl 
+                    ">Bring everyone together to build better products.</h1>
+          <p class="con | pt-8 px-16 lg:px-0
+                    typ | font-vietnam text-gray-500"
+          >
+            Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
+          </p>
+          
+          <!-- button -->
+          <div class="REU | button
+                      con | mt-8 flex justify-center lg:justify-start"></div>
         </div>
+
+        <!-- Hero Image -->
+        <div class="con | flex justify-center w-full lg:w-1/2">
+          <img src="/images/illustration-charts.svg" alt="">
+        </div>
+
+
+
       </section>
 
-      <section>
-        <div class="container">
-          <div class="even-columns">
+      <!-- Product Section -->
+      <section 
+        class="con | w-full px-16 lg:px-24 xl:px-40 mt-24 max-w-screen-2xl
+               con-pos | mx-auto"
+      >
+
+          <div 
+            class="con | flex flex-col lg:flex-row"
+          >
+            <!-- Column left -->
             <div>
-              <h2 class="fs-secondary-heading fw-bold">What's different about Manage?</h2>
-              <p>Manage provides all the functionality your team needs, without 
-                the complexity. Our software is tailor-made for modern digital 
-                product teams.</p>
+              <h2 class="typ-con | text-center lg:text-start
+                         typ | font-vietnam font-bold text-3xl lg:text-4xl leading-8"
+              >
+                What's different <br class="lg:hidden">about Manage?
+              </h2>
+              <p class="con | pt-8 px-8 lg:px-0
+                        typ-con | text-center lg:text-start
+                        typ | font-vietnam text-gray-500"
+              >
+                Manage provides all the functionality your team needs, without the  complexity. Our software is tailor-made for modern digital product teams.
+              </p>
             </div>
-            <div>
-              <ul role="list">
-                <li>
-                  <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
-                  <p>
-                    See how your day-to-day tasks fit into the wider vision. Go from 
-                    tracking progress at the milestone level all the way done to the 
-                    smallest of details. Never lose sight of the bigger picture again.
-                  </p>
+            <!-- Column right -->
+            <div class="con | mt-12 lg:mt-0 lg:ml-20 flex justify-start
+                        typ | font-vietnam">
+              <ul role="list" class="">
+                <!-- List 1 -->
+                <li class="con | relative flex flex-col mb-10">
+                  <div class="con | w-full mr-6">
+                    <div class="con | w-full py-0 rounded-full mb-4
+                                con-pos | flex items-center 
+                                con-sty | bg-accent-100 sm:bg-transparent shadow-md
+                                ani | fade-in">
+                      <a class="con | px-6 h-10 flex items-center
+                                con-sty | bg-accent-orange-primary rounded-full shadow-md 
+                                typ | text-xs text-white"
+                      >
+                        01
+                      </a>
+                      <h3 class="font-bold ml-8">Track company-wide progress</h3>
+                    </div>
+                  </div>
+                  <div class="con | ">
+                    <p class="typ-con | ml-1 lg:ml-20
+                              typ | text-sm text-gray-500">
+                      See how your day-to-day tasks fit into the wider vision. Go from 
+                      tracking progress at the milestone level all the way done to the 
+                      smallest of details. Never lose sight of the bigger picture again.
+                    </p>
+                  </div>
                 </li>
-                <li>
-                  <h3 class="fs-600 fw-bold">Advanced built-in reports</h3>
-                  <p>
-                    Set internal delivery estimates and track progress toward company 
-                    goals. Our customisable dashboard helps you build out the reports 
-                    you need to keep key stakeholders informed.
-                  </p>
+                <!-- List 2 -->
+                <li class="con | flex flex-col mb-10">
+                  <div class="con | w-full mr-6">
+                    <div class="con | w-full py-0 rounded-full mb-4
+                                con-pos | flex items-center 
+                                con-sty | bg-accent-100 sm:bg-transparent shadow-md
+                                ani | fade-in">
+                    <div class="con | px-6 h-10 flex items-center
+                              con-sty | bg-accent-orange-primary rounded-full shadow-md 
+                              typ | text-xs text-white"
+                      >
+                        02
+                    </div>
+                      <h3 class="font-bold ml-8">Advanced built-in reports</h3>
+                    </div>
+                  </div>
+                  <div class="con | ">
+                    <p class="typ-con | ml-1 lg:ml-20
+                              typ | text-sm text-gray-500">
+                      Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.
+                    </p>
+                  </div>
                 </li>
-                <li>
-                  <h3 class="fs-600 fw-bold">Everything you need in one place</h3>
-                  <p>
-                    Stop jumping from one service to another to communicate, store files, 
-                    track tasks and share documents. Manage offers an all-in-one team 
-                    productivity solution.
-                  </p>
-                </li>
+
+                <!-- List 3 -->
+                <li class="con | flex flex-col mb-10">
+                  <div class="con | w-full mr-6">
+                    <div class="con | w-full py-0 rounded-full mb-4
+                                con-pos | flex items-center 
+                                con-sty | bg-accent-100 sm:bg-transparent shadow-md
+                                ani | fade-in">
+                      <div class="con | px-6 h-10 flex items-center
+                                  con-sty | bg-accent-orange-primary rounded-full shadow-md 
+                                  typ | text-xs text-white"
+                      >
+                        03
+                      </div>
+                      <h3 class="font-bold ml-8">Everything you need in one place</h3>
+                    </div>
+                </div>
+                  <div class="con | ">
+                    <p class="typ-con | ml-1 md:ml-20
+                              typ | text-sm text-gray-500">
+                              Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.
+                    </p>
+                  </div>
+                </li> 
+
               </ul>
-
             </div>
           </div>
-        </div>
+
       </section>
 
-      <section class="carousel">
-        <h2 class="fs-secondary-heading">What they’ve said</h2>
+      <!-- Testimonial Section -->
+      <section class="con | w-full mt-32 max-w-screen-2xl
+                      con-pos | flex flex-col mx-auto">
+        <h2 class="typ | text-center text-3xl font-bold font-vietnam">
+          What they’ve said
+        </h2>
         <!-- Carousel -->
-        <button class="button">Get Started</button>
+        <div class="con | flex gap-8 mt-20
+                    typ | font-vietnam">
+          <!-- Testimonial 1 -->
+          <div class="con | flex flex-col relative lg:w-1/3 p-6 h-50 hidden lg:block
+                      con-sty | bg-accent-100 shadow-md">
+            <div class="con-pos | flex justify-center">
+              <img src="./images/avatar-anisha.png" alt="" class="con-pos | absolute w-20 -top-10">
+            </div>
+            <div class="text-center mt-8">
+                <p class="font-bold">Anisha Li</p>
+                <p class="mt-2 text-sm text-gray-500">“Manage has supercharged our team’s workflow. The ability to maintain 
+                  visibility on larger milestones at all times keeps everyone motivated.”
+                </p>  
+            </div>  
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="con | flex flex-col relative lg:w-1/3 p-6 h-50 
+                      con-sty | bg-accent-100 shadow-md">
+            <div class="con-pos | flex justify-center">
+              <img src="./images/avatar-ali.png" alt="" class="con-pos | absolute w-20 -top-10">
+            </div>
+            <div class="text-center mt-8">
+                <p class="font-bold">Ali Bravo</p>
+                <p class="mt-2 text-sm text-gray-500">“We have been able to cancel so many other subscriptions since using 
+                  Manage. There is no more cross-channel confusion and everyone is much 
+                  more focused.”
+                </p>  
+            </div>  
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="con | flex flex-col relative lg:w-1/3 p-6 h-50 hidden lg:block
+                      con-sty | bg-accent-100 shadow-md">
+            <div class="con-pos | flex justify-center">
+              <img src="./images/avatar-richard.png" alt="" class="con-pos | absolute w-20 -top-10">
+            </div>
+            <div class="text-center mt-8">
+                <p class="font-bold">Richard Watts</p>
+                <p class="mt-2 text-sm text-gray-500">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”
+                </p>  
+            </div>  
+          </div>
+        </div>
+        <!-- EO Carousel -->
+
+        <!-- 4 dots -->
+        <div class="con | mt-8 
+                    con-pos | flex mx-auto justify-self-center gap-x-2 lg:hidden">
+          <div class="con | w-3 h-3
+                      con-sty | rounded-full border-2 border-accent-orange-primary hover:bg-accent-orange-primary"></div>
+          <div class="con | w-3 h-3
+                      con-sty | rounded-full border-2 border-accent-orange-primary hover:bg-accent-orange-primary"></div>
+          <div class="con | w-3 h-3
+                      con-sty | rounded-full border-2 border-accent-orange-primary hover:bg-accent-orange-primary"></div>
+          <div class="con | w-3 h-3
+                      con-sty | rounded-full border-2 border-accent-orange-primary hover:bg-accent-orange-primary"></div>
+        </div>
+
+        <!-- button -->
+        <div class="REU | button
+                    con | mt-12
+                    con-pos | flex justify-center"></div>
       </section>
 
       <!-- Footer - Call to Action  -->
-      <section class="cta | bg-primary-400 text-neutral-100">
-        <div class="container">
-          <div class="even-columns">
-            <div>
-              <p class="fs-secondary-heading fw-bold">
-                Simplify how your team works today.
+      <section class="con | w-full px-16 py-16 md:py-12 lg:px-24 xl:px-40 mt-24
+                      con-sty | bg-accent-orange-primary
+                      typ | font-vietnam">
+        <div class="con | max-w-screen-2xl
+                    con-pos | relative flex flex-col md:flex-row justify-between">
+            <!-- <img src="./images/bg-tablet-pattern.svg" alt="" class="absolute" width="400" style="z-index: 1;"> -->
+            <div style="z-index: 10;">
+              <p class="typ-pos | text-center md:text-start
+                        typ | text-3xl font-bold text-accent-100">
+                Simplify how your team <br class="lg:block">works today.
               </p>
             </div>
-            <div>
-              <button class="button" data-type="inverted">Get Started</button>
+            <div class="con |  mt-6
+                        con-pos | flex justify-center md:justify-end">
+                <button 
+                  class="con | px-6 py-3 rounded-full 
+                         con-sty | bg-accent-100 shadow-md hover:bg-white
+                         typ | text-sm
+                         typ-sty | text-accent-orange-secondary hover:text-accent-orange-primary"
+                >
+                  Get Started
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
+
       </section>
     </main>
 
-    <footer class="bg-neutral-900 text-neutral-100">
-      <div class="container">
-        <div class="even-columns">
-          <div>
-            <a href="#"><img src="images/logo.svg" alt="logo"></a>
-            <ul role="list" aria-label="social links">
-              <li><a href="#" aria-label="facebook"></a></li>
-              <li><a href="#" aria-label="youtube"></a></li>
-              <li><a href="#" aria-label="twitter"></a></li>
-              <li><a href="#" aria-label="pinterest"></a></li>
-              <li><a href="#" aria-label="instagram"></a></li>
+    <!-- Footer -->
+    <footer class="con | px-12 py-12 lg:px-24 xl:px-40 
+                   con-sty | bg-black-secondary 
+                   typ | text-white font-vietnam">
+      
+      <div class="con | w-full mx-auto flex flex-col-reverse lg:flex-row max-w-screen-2xl
+                  con-pos | mx-auto">
+        <!-- Logo Section -->
+        <div class="con | w-full lg:w-1/4 mt-14 lg:mt-0
+                    con-pos | flex flex-col-reverse lg:flex-col content-between lg:gap-y-24">
+          
+          <div class="con | mt-14 lg:mt-0 flex justify-center lg:justify-start">
+            <a href="#"><img src="images/logo.svg" class="con | h-8 lg:h-auto turn-white" alt="logo"></a>
+          </div>
+
+          <div class="con-pos | flex justify-center lg:justify-start">
+            
+            <ul aria-label="social links" 
+              class="con | w-full
+                     con-pos | mx-auto flex gap-10 lg:gap-4 items-center justify-center lg:justify-start"
+            >
+                <li><a href="#" aria-label="facebook"><img src="./images/icon-facebook.svg" 
+                      class="w-10 lg:w-6" alt="">
+                    </a>
+                </li>
+                <li><a href="#" aria-label="youtube"><img src="./images/icon-youtube.svg" 
+                      class="w-10 lg:w-6" alt="">
+                    </a>
+                </li>
+                <li><a href="#" aria-label="twitter"><img src="./images/icon-twitter.svg" 
+                      class="w-10 lg:w-6" alt="">
+                    </a>
+                </li>
+                <li><a href="#" aria-label="pinterest"><img src="./images/icon-pinterest.svg" 
+                      class="w-10 lg:w-6" alt="">
+                    </a>
+                </li>
+                <li><a href="#" aria-label="instagram"><img src="./images/icon-instagram.svg" 
+                      class="w-10 lg:w-6" alt="">
+                    </a>
+                </li>
             </ul>
-          </div>
+          </div>  
+                  
+        </div>
+
+        <!-- Navbar Section -->
+        <div class="con | w-full lg:w-2/4 mt-10 lg:mt-0
+                    con-pos | flex mx-auto">
+            <ul class="con | w-full px-16
+                       con-pos | flex mx-auto justify-between">
+              <div class="w-1/2">
+                <li class="mb-4"><a href="#" class="hover:text-accent-orange-primary">Home</a></li>
+                <li class="mb-4"><a href="#" class="hover:text-accent-orange-primary">Pricing</a></li>
+                <li class="mb-4"><a href="#" class="hover:text-accent-orange-primary">Products</a></li>
+                <li><a href="#" class="hover:text-accent-orange-primary">About Us</a></li>
+              </div>
+              <div class="w-1/2">
+                <li class="mb-4"><a href="#" class="hover:text-accent-orange-primary">Careers</a></li>
+                <li class="mb-4"><a href="#" class="hover:text-accent-orange-primary">Community</a></li>
+                <li><a href="#" class="hover:text-accent-orange-primary">Privacy Policy</a></li>
+              </div>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="con | w-full lg:w-1/4
+                    con-pos | mx-auto flex flex-col gap-y-14">
           <div>
-            <nav class="footer-nav">
-              <ul role="list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div>
-            <form action="">
-              <input type="email"><button class="button">Go</button>
+            <form action="" class="flex">
+              <input type="email" placeholder="johnmadden/mail" 
+                class="con | p-3 px-6 w-full 
+                       con-sty | border-2 rounded-full border-accent-orange-primary
+                       typ | text-base">
+              <button 
+                class="ml-2 px-6 rounded-full
+                      bg-accent-orange-secondary
+                      text-white
+              ">
+                Go
+              </button>
             </form>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p class="con | mt-2 px-6 
+                      con-pos | hidden lg:block
+                      typ | text-xs text-accent-orange-primary">
+              Please insert a valid email
+            </p>
+          </div>
+          <div class="flex justify-end">
+            <p class="con-pos | hidden lg:block
+                      typ | text-xs text-gray-500 text-left" 
+            >
+              Copyright 2022. All Rights Reserved
+            </p>
           </div>
         </div>
-      </div>
+      </div>            
+
+      <p class="con | my-14
+                con-pos | block lg:hidden
+                typ | text-sm text-gray-500 text-center">Copyright 2022. All Rights Reserved</p>
+
     </footer>
 
     <script type="module" src="main.js"></script>
